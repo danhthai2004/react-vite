@@ -6,9 +6,7 @@ const MyComponent = () => {
         <>
             <div> My Component </div>
             <div className="child"
-                style={
-                    { borderRadius: "10px" }
-                }
+                style={{ borderRadius: "10px" }}
             >Child</div>
         </>
     );
