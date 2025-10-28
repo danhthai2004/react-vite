@@ -1,7 +1,16 @@
+import './style.css';
+
 //component syntax
 const MyComponent = () => {
     return (
-        <div> My Component </div>
+        <>
+            <div> My Component </div>
+            <div className="child"
+                style={
+                    { borderRadius: "10px" }
+                }
+            >Child</div>
+        </>
     );
 }
 
