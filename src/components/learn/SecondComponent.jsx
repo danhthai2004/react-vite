@@ -10,4 +10,4 @@ const ThirdComponent = () => {
     );
 }
 
-export { SecondComponent, ThirdComponent }; //nếu không dùng default thì phải dùng cách này để export 
+export { SecondComponent, ThirdComponent }; //nếu không dùng default thì phải dùng cách này để export, có thể xuất ra nhiều component trong cùng một file
