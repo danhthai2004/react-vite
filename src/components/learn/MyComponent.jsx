@@ -7,6 +7,8 @@ import './style.css';
 // const bien = undefined;
 // const bien = [1, 2, 3];
 const bien = { name: "Thai", age: 22 };
+
+//với biến string và number thì không cần dùng JSON.stringify() mà chỉ cần đặt biến trong dấu {}
 //component syntax
 const MyComponent = () => {
     return (
@@ -14,7 +16,7 @@ const MyComponent = () => {
             <div>{JSON.stringify(bien)}</div>
             <div> {console.log("Hello World")} </div>
             <div className="child"
-                style={{ borderRadius: "10px" }}
+                style={{ borderRadius: "10px" }} //dấu {} đầu tiên là để nhúng js, dấu {} thứ 2 là object literal
             >Child</div>
         </>
     );
