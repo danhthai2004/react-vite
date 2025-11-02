@@ -4,7 +4,7 @@ const TodoList = (props) => { //props là 1 object chứa các thuộc tính đ�
     // const name = props.name;
     // const age = props.age;
     // const data = props.data;
-    const { name, age, data } = props; //destructuring assignment
+    const { name, age, data, Todos } = props; //destructuring assignment
 
     return (
         <div className="todo-list">
@@ -15,6 +15,9 @@ const TodoList = (props) => { //props là 1 object chứa các thuộc tính đ�
             <div>Age: {age}</div>
             <div>Address: {data.address}</div>
             <div>Country: {data.country}</div>
+            <div>
+                {JSON.stringify(Todos)}
+            </div>
         </div>
     )
 }

@@ -1,6 +1,10 @@
+import { useState } from "react";
 import "./todo.css";
 
 const TodoAdd = (props) => {
+  //useState hook để quản lý giá trị input
+  const [valueInput, setValueInput] = useState("");
+
   const { addNewTodo } = props;
 
   // addNewTodo("Thai"); // Gọi hàm addNewTodo khi component được render
@@ -10,7 +14,7 @@ const TodoAdd = (props) => {
   }
 
   const handleOnChange = (name) => {
-    console.log("Input changed: ", name);
+    setValueInput(name);
   }
   return (
     <div className="todo-add">
@@ -21,6 +25,9 @@ const TodoAdd = (props) => {
         style={{ cursor: "pointer" }}
         onClick={addNewTodo}
       >Add</button>
+      <div>
+        Text inpput:
+      </div>
     </div>
   )
 }

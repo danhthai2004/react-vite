@@ -2,6 +2,7 @@ import './components/todo/todo.css';
 import TodoAdd from './components/todo/TodoAdd.jsx';
 import TodoList from './components/todo/TodoList.jsx';
 import reactLogo from './assets/react.svg';
+import { useState } from 'react';
 // arrow function syntax
 const App = () => {
 
@@ -11,6 +12,11 @@ const App = () => {
     address: "Da Nang",
     country: "Viet Nam"
   }
+
+  const [Todos, setTodos] = useState([
+    { id: 1, name: "Learn ReactJS" },
+    { id: 2, name: "Learn Spring Boot" }
+  ]);
 
   const addNewTodo = (name) => {
     alert(`New Todo Added : ${name}`);
@@ -26,6 +32,7 @@ const App = () => {
         name={ten}
         age={tuoi}
         data={data}
+        Todos={Todos}
       />
       <div className='todo-image'>
         <img className='logo' src={reactLogo} />
