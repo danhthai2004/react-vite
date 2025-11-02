@@ -12,10 +12,16 @@ const App = () => {
     country: "Viet Nam"
   }
 
+  const addNewTodo = (name) => {
+    alert(`New Todo Added : ${name}`);
+  }
+
   return (
     <div className="todo-container">
       <div className="todo-title">Todo List</div>
-      <TodoAdd />
+      <TodoAdd
+        addNewTodo={addNewTodo} //không cần dấu () nếu không muốn gọi hàm ngay lập tức
+      />
       <TodoList
         name={ten}
         age={tuoi}
