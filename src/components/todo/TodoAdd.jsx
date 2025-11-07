@@ -10,7 +10,7 @@ const TodoAdd = (props) => {
   // addNewTodo("Thai"); // Gọi hàm addNewTodo khi component được render
 
   const handleAddClick = () => {
-    alert("Button Clicked");
+    addNewTodo(valueInput);
   }
 
   const handleOnChange = (name) => {

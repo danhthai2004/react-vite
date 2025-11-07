@@ -19,7 +19,15 @@ const App = () => {
   ]);
 
   const addNewTodo = (name) => {
-    alert(`New Todo Added : ${name}`);
+    const newTodo = {
+      id: randomIntFromInterval(1, 1000000),
+      name: name
+    };
+    setTodos([...Todos, newTodo]); //dùng spread operator để giữ lại các phần tử cũ trong mảng, sau đó thêm phần tử mới vào
+  }
+
+  const randomIntFromInterval = (min, max) => { // min and max included
+    return Math.floor(Math.random() * (max - min + 1) + min)
   }
 
   return (
