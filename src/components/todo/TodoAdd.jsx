@@ -11,6 +11,7 @@ const TodoAdd = (props) => {
 
   const handleAddClick = () => {
     addNewTodo(valueInput);
+    setValueInput(""); //reset lại giá trị input là rỗng sau khi thêm
   }
 
   const handleOnChange = (name) => {
@@ -20,13 +21,14 @@ const TodoAdd = (props) => {
     <div className="todo-add">
       <input type="text"
         onChange={(event) => handleOnChange(event.target.value)}
+        value={valueInput} //kiểm soát giá trị của input được lấy từ state
       />
       <button
         style={{ cursor: "pointer" }}
-        onClick={handleAddClick} //phần này video 37 bị sai
+        onClick={handleAddClick}
       >Add</button>
       <div>
-        Text inpput:
+        Text input:
       </div>
     </div>
   )
