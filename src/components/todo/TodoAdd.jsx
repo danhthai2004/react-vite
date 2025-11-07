@@ -23,7 +23,7 @@ const TodoAdd = (props) => {
       />
       <button
         style={{ cursor: "pointer" }}
-        onClick={addNewTodo}
+        onClick={handleAddClick} //phần này video 37 bị sai
       >Add</button>
       <div>
         Text inpput:
