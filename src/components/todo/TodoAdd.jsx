@@ -17,10 +17,11 @@ const TodoAdd = (props) => {
   const handleOnChange = (name) => {
     setValueInput(name);
   }
+
   return (
     <div className="todo-add">
       <input type="text"
-        onChange={(event) => handleOnChange(event.target.value)}
+        onChange={(event) => handleOnChange(event.target.value)} //lấy giá trị từ event và truyền vào hàm handleOnChange
         value={valueInput} //kiểm soát giá trị của input được lấy từ state
       />
       <button
