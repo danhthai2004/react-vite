@@ -6,16 +6,8 @@ import { useState } from 'react';
 // arrow function syntax
 const App = () => {
 
-  const ten = "Thai";
-  const tuoi = 22;
-  const data = {
-    address: "Da Nang",
-    country: "Viet Nam"
-  }
-
   const [Todos, setTodos] = useState([
-    { id: 1, name: "Learn ReactJS" },
-    { id: 2, name: "Learn Spring Boot" }
+
   ]);
 
   const addNewTodo = (name) => {
@@ -37,9 +29,6 @@ const App = () => {
         addNewTodo={addNewTodo} //không cần dấu () nếu không muốn gọi hàm ngay lập tức
       />
       <TodoList
-        name={ten}
-        age={tuoi}
-        data={data}
         Todos={Todos}
       />
       <div className='todo-image'>
