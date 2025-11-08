@@ -28,12 +28,28 @@ const App = () => {
       <TodoAdd
         addNewTodo={addNewTodo} //không cần dấu () nếu không muốn gọi hàm ngay lập tức
       />
-      <TodoList
-        Todos={Todos}
-      />
-      <div className='todo-image'>
-        <img className='logo' src={reactLogo} />
-      </div>
+
+      {Todos.length > 0 ? (
+        <TodoList
+          Todos={Todos}
+        />
+      ) : (
+        <div className='todo-image'>
+          <img className='logo' src={reactLogo} />
+        </div>
+      )}
+
+      {/* {Todos.length > 0 &&
+        <TodoList
+          Todos={Todos}
+        />
+      }
+
+      {Todos.length === 0 &&
+        <div className='todo-image'>
+          <img className='logo' src={reactLogo} />
+        </div>
+      } */}
     </div>
   )
 }
