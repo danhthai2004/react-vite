@@ -4,4 +4,4 @@ const ProductPage = () => {
     )
 }
 
-export default ProductsPage
+export default ProductPage
