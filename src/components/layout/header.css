@@ -6,11 +6,11 @@ ul {
     background-color: #333333;
 }
 
-ul li {
+li {
     float: left;
 }
 
-ul li a {
+li a {
     display: block;
     color: white;
     text-align: center;
@@ -18,7 +18,7 @@ ul li a {
     text-decoration: none;
 }
 
-ul li a:hover:not(.active) {
+li a:hover:not(.active) {
     background-color: #111111;
 }
 
